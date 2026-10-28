@@ -51,6 +51,10 @@ sys.stderr.reconfigure(encoding="utf-8")
 
 COURSE_TYPES = ["必修课", "选修课", "课程论文", "实验（实践）课"]
 
+# 问题分级自检：这些词出现在第四部分，通常意味着把系统/模板/纸质环节写成了教师问题
+TRIAGE_BANNED = ["签字盖章", "答题册", "打印份数", "课程试卷及成绩分析表",
+                 "XX列", "专业班级", "考试日期", "答题要求", "统计口径"]
+
 
 def set_run_font(run, name_cn="宋体", name_ascii="Times New Roman", size=12, bold=False):
     run.font.name = name_ascii
@@ -251,6 +255,26 @@ def build(payload, out_path):
     return {"out": os.path.abspath(out_path), "cjk": cjk, "words": latin, "total": total}
 
 
+def triage_warnings(payload):
+    """按 issue-triage.md 的口径做轻量自检，只提醒，不阻断生成。"""
+    msgs = []
+    for sec in payload.get("sections", []):
+        heading = str(sec.get("heading", ""))
+        text = "\n".join(str(p) for p in sec.get("paras", []))
+        if "两性一度" in heading:
+            # 只盯“识记/理解应用/高阶……占X%”这类认知层次占比，避免误伤“平时成绩占30%”
+            pattern = r"(识记再现|识记|理解应用|分析综合|高阶|情境化|开放性|提高题)[^。；]{0,25}?占\s*\d+(?:\.\d+)?\s*[%％]"
+            for para in sec.get("paras", []):
+                for m in re.finditer(pattern, str(para)):
+                    msgs.append(f"‘{heading}’出现认知层次占比“{m.group(0)}”：按规范，占比只放核查底稿，正文写分值+题例。")
+        if re.match(r"\s*四、", heading):
+            hits = [w for w in TRIAGE_BANNED if w in text]
+            if hits:
+                msgs.append("第四部分疑似包含系统/模板/纸质环节事项（" + "、".join(hits) +
+                            "）：请对照 references/issue-triage.md 移出报告，改为对话提醒。")
+    return msgs
+
+
 def main():
     ap = argparse.ArgumentParser(description="生成试卷检查结果报告 docx")
     ap.add_argument("--payload", required=True, help="JSON 数据文件")
@@ -267,6 +291,8 @@ def main():
     joined = json.dumps(payload, ensure_ascii=False)
     if "（填写" in joined or "TODO" in joined or "……" in joined:
         print("[提醒] 报告中可能仍含模板提示语或省略号，请检查后再交付。", file=sys.stderr)
+    for msg in triage_warnings(payload):
+        print("[提醒] " + msg, file=sys.stderr)
     if res["total"] < args.min_words:
         print(f"[警告] 字数不足 {args.min_words} 字，请补充实质内容（不要用空话凑字数）。", file=sys.stderr)
         sys.exit(1)

@@ -38,8 +38,13 @@ TEMPLATE = os.path.join(SKILL_DIR, "assets", "试卷自查登记表.xlsx")
 
 HEADERS = ["序号", "开课学年", "课程名称", "课程类型", "专业班级", "任课/老师",
            "涉及学生姓名或学号", "问题点及描述", "备注"]
-WIDTHS = [6, 14, 20, 12, 30, 12, 22, 55, 24]
+# 合计约 136 个字符宽，A4 横向按 100% 打印不再缩放
+WIDTHS = [4, 11, 11, 6, 12, 5, 8, 46, 12]
 KEYS = ["no", "year", "course", "type", "class", "teacher", "students", "issue", "note"]
+
+# 问题分级自检：这些词通常意味着把系统/模板/纸质环节写成了教师问题
+TRIAGE_BANNED = ["签字盖章", "答题册", "打印份数", "课程试卷及成绩分析表",
+                 "XX列", "专业班级", "考试日期", "答题要求", "统计口径"]
 
 
 def build(rows, out_path, template=TEMPLATE):
@@ -61,6 +66,8 @@ def build(rows, out_path, template=TEMPLATE):
         c.border = border
         ws.column_dimensions[c.column_letter].width = w
 
+    ws.row_dimensions[1].height = 42
+
     start = 2
     for i, item in enumerate(rows):
         vals = []
@@ -78,8 +85,10 @@ def build(rows, out_path, template=TEMPLATE):
             else:
                 c.alignment = Alignment(horizontal="left", vertical="center", wrap_text=True)
         issue_len = len(str(item.get("issue", "")))
-        lines = max(1, (issue_len + 26) // 27)
-        ws.row_dimensions[start + i].height = max(30, 18 * lines)
+        note_len = len(str(item.get("note", "")))
+        lines = max(1, (issue_len + 21) // 22)
+        note_lines = max(1, (note_len + 4) // 5)
+        ws.row_dimensions[start + i].height = max(28, 14.2 * max(lines, note_lines) + 6)
 
     # 清空模板中多余的空白行边框
     for r in range(start + len(rows), ws.max_row + 1):
@@ -88,9 +97,17 @@ def build(rows, out_path, template=TEMPLATE):
 
     ws.freeze_panes = "A2"
     ws.page_setup.orientation = "landscape"
+    ws.page_margins.left = 1.0
+    ws.page_margins.right = 1.0
+    ws.page_margins.top = 0.9
+    ws.page_margins.bottom = 0.9
     ws.page_setup.paperSize = ws.PAPERSIZE_A4
+    # 宽度固定为一页；行数较多、超出 A4 横向一页时再整体缩放
+    total_h = float(ws.row_dimensions[1].height or 42)
+    for i in range(len(rows)):
+        total_h += float(ws.row_dimensions[start + i].height or 28)
     ws.page_setup.fitToWidth = 1
-    ws.page_setup.fitToHeight = 0
+    ws.page_setup.fitToHeight = 1 if total_h > 540 else 0
     ws.sheet_properties.pageSetUpPr.fitToPage = True
     ws.print_title_rows = "1:1"
     ws.print_area = f"A1:I{start + max(len(rows), 1) - 1}"
@@ -114,6 +131,14 @@ def main():
     out = build(rows, args.out, args.template)
     print(f"[已生成] {out}")
     print(f"[条目数] {len(rows)}")
+
+    hits = set()
+    for item in rows:
+        text = str(item.get("issue", "")) + " " + str(item.get("note", ""))
+        hits.update(w for w in TRIAGE_BANNED if w in text)
+    if hits:
+        print("[提醒] 登记表疑似包含系统/模板/纸质环节事项（" + "、".join(sorted(hits)) +
+              "）：按 references/issue-triage.md 只保留教师可改的硬性问题。", file=sys.stderr)
 
 
 if __name__ == "__main__":
