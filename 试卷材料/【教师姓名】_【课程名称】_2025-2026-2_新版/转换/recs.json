@@ -1,0 +1,893 @@
+[
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "84",
+    "mid": "0",
+    "final": "64",
+    "total": "70",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "63",
+    "mid": "0",
+    "final": "60",
+    "total": "61",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "90",
+    "mid": "0",
+    "final": "80",
+    "total": "83",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "84",
+    "mid": "0",
+    "final": "64",
+    "total": "70",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "88",
+    "mid": "0",
+    "final": "72",
+    "total": "77",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "60",
+    "mid": "0",
+    "final": "38",
+    "total": "45",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "98",
+    "mid": "0",
+    "final": "96",
+    "total": "97",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "60",
+    "mid": "0",
+    "final": "24",
+    "total": "35",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "86",
+    "mid": "0",
+    "final": "69",
+    "total": "74",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "60",
+    "mid": "0",
+    "final": "4",
+    "total": "21",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "89",
+    "mid": "0",
+    "final": "62",
+    "total": "70",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "93",
+    "mid": "0",
+    "final": "72",
+    "total": "78",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "83",
+    "mid": "0",
+    "final": "62",
+    "total": "68",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "94",
+    "mid": "0",
+    "final": "76",
+    "total": "81",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "83",
+    "mid": "0",
+    "final": "61",
+    "total": "68",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "88",
+    "mid": "0",
+    "final": "80",
+    "total": "82",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "66",
+    "mid": "0",
+    "final": "44",
+    "total": "51",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "82",
+    "mid": "0",
+    "final": "65",
+    "total": "70",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "97",
+    "mid": "0",
+    "final": "70",
+    "total": "78",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "60",
+    "mid": "0",
+    "final": "10",
+    "total": "25",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "97",
+    "mid": "0",
+    "final": "87",
+    "total": "90",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "76",
+    "mid": "0",
+    "final": "64",
+    "total": "68",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "94",
+    "mid": "0",
+    "final": "81",
+    "total": "85",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "92",
+    "mid": "0",
+    "final": "75",
+    "total": "80",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "84",
+    "mid": "0",
+    "final": "65",
+    "total": "71",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "93",
+    "mid": "0",
+    "final": "81",
+    "total": "85",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "81",
+    "mid": "0",
+    "final": "60",
+    "total": "66",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "85",
+    "mid": "0",
+    "final": "61",
+    "total": "68",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "62",
+    "mid": "0",
+    "final": "44",
+    "total": "49",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "92",
+    "mid": "0",
+    "final": "72",
+    "total": "78",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "95",
+    "mid": "0",
+    "final": "74",
+    "total": "80",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "81",
+    "mid": "0",
+    "final": "60",
+    "total": "66",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "89",
+    "mid": "0",
+    "final": "62",
+    "total": "70",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "65",
+    "mid": "0",
+    "final": "44",
+    "total": "50",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "86",
+    "mid": "0",
+    "final": "60",
+    "total": "68",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "83",
+    "mid": "0",
+    "final": "60",
+    "total": "67",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "97",
+    "mid": "0",
+    "final": "84",
+    "total": "88",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "82",
+    "mid": "0",
+    "final": "60",
+    "total": "67",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "66",
+    "mid": "0",
+    "final": "42",
+    "total": "49",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "60",
+    "mid": "0",
+    "final": "18",
+    "total": "31",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "62",
+    "mid": "0",
+    "final": "32",
+    "total": "41",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "60",
+    "mid": "0",
+    "final": "15",
+    "total": "29",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "61",
+    "mid": "0",
+    "final": "6",
+    "total": "23",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "91",
+    "mid": "0",
+    "final": "72",
+    "total": "78",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "80",
+    "mid": "0",
+    "final": "63",
+    "total": "68",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "80",
+    "mid": "0",
+    "final": "72",
+    "total": "74",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "98",
+    "mid": "0",
+    "final": "97",
+    "total": "97",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "62",
+    "mid": "0",
+    "final": "60",
+    "total": "61",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "90",
+    "mid": "0",
+    "final": "71",
+    "total": "77",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "85",
+    "mid": "0",
+    "final": "60",
+    "total": "68",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "0",
+    "mid": "0",
+    "final": "0",
+    "total": "0",
+    "note": "缺考"
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "98",
+    "mid": "0",
+    "final": "91",
+    "total": "93",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "81",
+    "mid": "0",
+    "final": "62",
+    "total": "68",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "98",
+    "mid": "0",
+    "final": "70",
+    "total": "78",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "67",
+    "mid": "0",
+    "final": "6",
+    "total": "24",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "60",
+    "mid": "0",
+    "final": "33",
+    "total": "41",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "86",
+    "mid": "0",
+    "final": "50",
+    "total": "61",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "84",
+    "mid": "0",
+    "final": "67",
+    "total": "72",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "60",
+    "mid": "0",
+    "final": "21",
+    "total": "33",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "94",
+    "mid": "0",
+    "final": "70",
+    "total": "77",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "90",
+    "mid": "0",
+    "final": "70",
+    "total": "76",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "83",
+    "mid": "0",
+    "final": "61",
+    "total": "68",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "94",
+    "mid": "0",
+    "final": "60",
+    "total": "70",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "86",
+    "mid": "0",
+    "final": "50",
+    "total": "61",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "80",
+    "mid": "0",
+    "final": "61",
+    "total": "67",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "92",
+    "mid": "0",
+    "final": "66",
+    "total": "74",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "91",
+    "mid": "0",
+    "final": "61",
+    "total": "70",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "85",
+    "mid": "0",
+    "final": "60",
+    "total": "68",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "0",
+    "mid": "0",
+    "final": "0",
+    "total": "0",
+    "note": "缺考"
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "83",
+    "mid": "0",
+    "final": "61",
+    "total": "68",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "91",
+    "mid": "0",
+    "final": "83",
+    "total": "85",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "94",
+    "mid": "0",
+    "final": "73",
+    "total": "79",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "66",
+    "mid": "0",
+    "final": "21",
+    "total": "35",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "67",
+    "mid": "0",
+    "final": "18",
+    "total": "33",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "97",
+    "mid": "0",
+    "final": "92",
+    "total": "94",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "62",
+    "mid": "0",
+    "final": "40",
+    "total": "47",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "65",
+    "mid": "0",
+    "final": "10",
+    "total": "27",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "95",
+    "mid": "0",
+    "final": "84",
+    "total": "87",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "89",
+    "mid": "0",
+    "final": "62",
+    "total": "70",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "77",
+    "mid": "0",
+    "final": "60",
+    "total": "65",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "82",
+    "mid": "0",
+    "final": "61",
+    "total": "67",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "85",
+    "mid": "0",
+    "final": "60",
+    "total": "68",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "84",
+    "mid": "0",
+    "final": "76",
+    "total": "78",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "60",
+    "mid": "0",
+    "final": "12",
+    "total": "26",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "89",
+    "mid": "0",
+    "final": "68",
+    "total": "74",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "83",
+    "mid": "0",
+    "final": "60",
+    "total": "67",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "96",
+    "mid": "0",
+    "final": "75",
+    "total": "81",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "90",
+    "mid": "0",
+    "final": "69",
+    "total": "75",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "89",
+    "mid": "0",
+    "final": "64",
+    "total": "72",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "92",
+    "mid": "0",
+    "final": "82",
+    "total": "85",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "60",
+    "mid": "0",
+    "final": "19",
+    "total": "31",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "83",
+    "mid": "0",
+    "final": "66",
+    "total": "71",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "90",
+    "mid": "0",
+    "final": "60",
+    "total": "69",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "89",
+    "mid": "0",
+    "final": "60",
+    "total": "69",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "69",
+    "mid": "0",
+    "final": "60",
+    "total": "63",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "0",
+    "mid": "0",
+    "final": "0",
+    "total": "0",
+    "note": "缺考"
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "67",
+    "mid": "0",
+    "final": "34",
+    "total": "44",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "81",
+    "mid": "0",
+    "final": "60",
+    "total": "66",
+    "note": null
+  },
+  {
+    "sid": "【学号】",
+    "name": "【学生姓名】",
+    "usual": "80",
+    "mid": "0",
+    "final": "60",
+    "total": "66",
+    "note": null
+  }
+]
