@@ -42,9 +42,12 @@ HEADERS = ["序号", "开课学年", "课程名称", "课程类型", "专业班�
 WIDTHS = [4, 11, 11, 6, 12, 5, 8, 46, 12]
 KEYS = ["no", "year", "course", "type", "class", "teacher", "students", "issue", "note"]
 
-# 问题分级自检：这些词通常意味着把系统/模板/纸质环节写成了教师问题
+# 整改点自检：这些词通常意味着把系统/模板/纸质环节写成了教师问题
 TRIAGE_BANNED = ["签字盖章", "答题册", "打印份数", "课程试卷及成绩分析表",
                  "XX列", "专业班级", "考试日期", "答题要求", "统计口径"]
+CORRECTNESS_BANNED = ["答案错误", "答案有误", "算错", "无解", "不可对角化",
+                      "复算", "转置", "条件矛盾", "选项不唯一"]
+MATERIAL_ACTION_BANNED = ["补做", "补签", "补齐", "替换归档", "重出", "重新输出"]
 
 
 def build(rows, out_path, template=TEMPLATE):
@@ -133,12 +136,22 @@ def main():
     print(f"[条目数] {len(rows)}")
 
     hits = set()
+    corr_hits = set()
+    action_hits = set()
     for item in rows:
         text = str(item.get("issue", "")) + " " + str(item.get("note", ""))
         hits.update(w for w in TRIAGE_BANNED if w in text)
+        corr_hits.update(w for w in CORRECTNESS_BANNED if w in text)
+        action_hits.update(w for w in MATERIAL_ACTION_BANNED if w in text)
     if hits:
         print("[提醒] 登记表疑似包含系统/模板/纸质环节事项（" + "、".join(sorted(hits)) +
-              "）：按 references/issue-triage.md 只保留教师可改的硬性问题。", file=sys.stderr)
+              "）：按 references/issue-triage.md 只保留面向下一轮的通用整改点。", file=sys.stderr)
+    if corr_hits:
+        print("[提醒] 登记表疑似在判断答案对错（" + "、".join(sorted(corr_hits)) +
+              "）：现行口径不核查答案对错，请改为通用整改方向。", file=sys.stderr)
+    if action_hits:
+        print("[提醒] 登记表疑似要求改动本次材料（" + "、".join(sorted(action_hits)) +
+              "）：材料问题改为交付对话提醒。", file=sys.stderr)
 
 
 if __name__ == "__main__":

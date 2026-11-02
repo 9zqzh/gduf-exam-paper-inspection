@@ -51,9 +51,14 @@ sys.stderr.reconfigure(encoding="utf-8")
 
 COURSE_TYPES = ["必修课", "选修课", "课程论文", "实验（实践）课"]
 
-# 问题分级自检：这些词出现在第四部分，通常意味着把系统/模板/纸质环节写成了教师问题
+# 整改点自检：这些词出现在第四部分，通常意味着把系统/模板/纸质环节写成了教师问题
 TRIAGE_BANNED = ["签字盖章", "答题册", "打印份数", "课程试卷及成绩分析表",
                  "XX列", "专业班级", "考试日期", "答题要求", "统计口径"]
+# 现行口径不判断答案对错，出现这些词通常说明又回到逐题纠错
+CORRECTNESS_BANNED = ["答案错误", "答案有误", "算错", "无解", "不可对角化",
+                      "复算", "转置", "条件矛盾", "选项不唯一"]
+# 整改措施应面向下一轮，不要求改动本次材料
+MATERIAL_ACTION_BANNED = ["补做", "补签", "补齐", "替换归档", "重出", "重新输出"]
 
 
 def set_run_font(run, name_cn="宋体", name_ascii="Times New Roman", size=12, bold=False):
@@ -190,8 +195,9 @@ def build(payload, out_path):
     # 正文
     all_text = []
     for section in payload.get("sections", []):
-        add_para(doc, section.get("heading", ""), size=14, bold=True,
-                 indent=False, before=14, after=6, cn="黑体")
+        hp = add_para(doc, section.get("heading", ""), size=14, bold=True,
+                      indent=False, before=14, after=6, cn="黑体")
+        hp.paragraph_format.keep_with_next = True
         for para in section.get("paras", []):
             if not str(para).strip():
                 continue
@@ -272,6 +278,15 @@ def triage_warnings(payload):
             if hits:
                 msgs.append("第四部分疑似包含系统/模板/纸质环节事项（" + "、".join(hits) +
                             "）：请对照 references/issue-triage.md 移出报告，改为对话提醒。")
+            hits = [w for w in CORRECTNESS_BANNED if w in text]
+            if hits:
+                msgs.append("第四部分疑似在判断答案对错（" + "、".join(hits) +
+                            "）：现行口径不核查答案对错，请改为通用整改方向。")
+        if re.match(r"\s*五、", heading):
+            hits = [w for w in MATERIAL_ACTION_BANNED if w in text]
+            if hits:
+                msgs.append("第五部分疑似要求改动本次材料（" + "、".join(hits) +
+                            "）：整改措施应落在下一套卷或下一轮教学，材料问题改为对话提醒。")
     return msgs
 
 
